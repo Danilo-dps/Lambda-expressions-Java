@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
+import util.ProductPredicate;
 
 public class Program {
 
@@ -18,7 +19,7 @@ public class Program {
 
 		double min = 100.0;
 
-		list.removeIf(p -> p.getPrice() >= min);//Expressão Lambda sem interface
+		list.removeIf(new ProductPredicate());//Expressão Lambda com interface Predicate
 
 		for (Product p : list) {
 			System.out.println(p);
