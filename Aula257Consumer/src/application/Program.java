@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 
@@ -18,7 +17,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 
 		
-		list.forEach(new PriceUpdate());//Expressão Lambda com interface Consumer
+		list.forEach(Product::staticPriceUpdate);//Método estático como referêcia
 
 		list.forEach(System.out::println);//Método como referência
 	}
