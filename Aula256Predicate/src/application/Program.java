@@ -19,7 +19,7 @@ public class Program {
 
 		double min = 100.0;
 
-		list.removeIf(Product::staticProductPredicate);//Método estático como referêcia
+		list.removeIf(Product::nonStaticProductPredicate);//Método não estático como referêcia
 
 		for (Product p : list) {
 			System.out.println(p);
