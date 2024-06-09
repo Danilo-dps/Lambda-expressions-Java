@@ -17,7 +17,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 
 		
-		list.forEach(Product::staticPriceUpdate);//Método estático como referêcia
+		list.forEach(Product::nonStaticPriceUpdate);//Método não estático como referêcia
 
 		list.forEach(System.out::println);//Método como referência
 	}
