@@ -19,7 +19,7 @@ public class Program {
 
 		double min = 100.0;
 
-		list.removeIf(new ProductPredicate());//Expressão Lambda com interface Predicate
+		list.removeIf(Product::staticProductPredicate);//Método estático como referêcia
 
 		for (Product p : list) {
 			System.out.println(p);
