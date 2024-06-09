@@ -18,8 +18,8 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//Implementação da interface, fiz em cima o comentário pq a linha ficou grande
-		List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());	
+		//Método estático como referência, fiz em cima o comentário pq a linha ficou grande
+		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());	
 		
 		names.forEach(System.out::println);//Método como referência
 	}
