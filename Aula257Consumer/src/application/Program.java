@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import entities.Product;
 
@@ -15,9 +16,14 @@ public class Program {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
-
 		
-		list.forEach(Product::nonStaticPriceUpdate);//Método não estático como referêcia
+		double factor = 1.1;
+		//Declarando a função entre chaves pra mostrar que também funciona
+		Consumer<Product> cons = p -> {
+			p.setPrice(p.getPrice() * factor);
+		};
+		
+		list.forEach(cons);//Expressão lambda declarada
 
 		list.forEach(System.out::println);//Método como referência
 	}
